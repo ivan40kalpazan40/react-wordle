@@ -24,24 +24,6 @@ function App() {
 
         if (guess.length < 5) return;
 
-        //
-        // guess.map((letter, index) => {
-        //   let found = kbd.find((x) => x.letter === letter);
-        //   if (word.includes(letter)) {
-        //     if (word[index] === guess[index]) {
-        //       // set kbd to green for current letter
-        //       found.status = 'correctlyGuessed';
-        //     } else {
-        //       // set kbd to yellow for current letter
-        //       found.status = 'closeGuessed';
-        //     }
-        //   } else {
-        //     // set to grey
-        //     found.status = 'wrongGuessed';
-        //   }
-        //   console.log(`FOUND::: ${found}`);
-        // });
-
         // check if valid word
         const response = await validChecker(guess);
         const result = await response.json();
